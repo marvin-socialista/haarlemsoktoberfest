@@ -17,7 +17,7 @@
 
 | Role          | Font             | Weight    | Fallback    |
 |---------------|------------------|-----------|-------------|
-| Display/Title | UnifrakturCook   | 700       | cursive     |
+| Display/Title | Deutsch Gothic   | normal    | cursive     |
 | Body          | DM Sans          | 400, 500, 700 | sans-serif |
 
 ## Spacing (8px grid)
