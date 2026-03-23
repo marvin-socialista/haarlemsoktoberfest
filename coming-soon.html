@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haarlems Oktoberfest 2026 | Binnenkort meer</title>
+    <meta name="description" content="Haarlems Oktoberfest 2026 - het Oktoberfest van Haarlem op 19 september bij de Veerplas. Binnenkort meer informatie!">
+    <meta name="keywords" content="Oktoberfest Haarlem, Haarlems Oktoberfest, Oktoberfest 2026, Haarlem evenement, Oktoberfest Nederland, Veerplas Haarlem">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.haarlemsoktoberfest.nl/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Haarlems Oktoberfest 2026">
+    <meta property="og:description" content="Binnenkort meer info over het Oktoberfest in Haarlem!">
+    <meta property="og:image" content="https://www.haarlemsoktoberfest.nl/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://www.haarlemsoktoberfest.nl/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_NL">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Haarlems Oktoberfest 2026",
+        "description": "Het Oktoberfest van Haarlem bij de Veerplas. Live muziek, Duits bier en feest.",
+        "startDate": "2026-09-19",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+            "@type": "Place",
+            "name": "Veerplas",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Haarlem",
+                "addressCountry": "NL"
+            }
+        },
+        "organizer": {
+            "@type": "Organization",
+            "name": "Haarlems Oktoberfest",
+            "url": "https://www.haarlemsoktoberfest.nl"
+        },
+        "inLanguage": "nl"
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        @font-face {
+            font-family: 'Deutsch Gothic';
+            src: url('assets/font/Deutsch-Gothic.woff2') format('woff2'),
+                url('assets/font/Deutsch-Gothic.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        :root {
+            --color-primary: #0B7BC0;
+            --color-gold: #D4A843;
+            --color-gold-dark: #B8912E;
+            --color-dark: #1A1A2E;
+            --color-white: #FFFFFF;
+            --font-display: 'Deutsch Gothic', cursive;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-white);
+            min-height: 100vh;
+            min-height: 100svh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            background: var(--color-dark);
+        }
+
+        /* Bavarian pattern background */
+        body::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpolygon points='30,0 60,30 30,60 0,30' fill='%230B7BC0' opacity='0.08'/%3E%3C/svg%3E");
+            background-size: 60px 60px;
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            max-width: 640px;
+            width: 100%;
+        }
+
+        /* Bavarian divider */
+        .bavarian-divider {
+            height: 28px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Crect width='28' height='28' fill='%23FFFFFF'/%3E%3Cpolygon points='14,0 28,14 14,28 0,14' fill='%230B7BC0'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-size: 28px 28px;
+            margin-bottom: 3rem;
+        }
+
+        .logo {
+            width: clamp(300px, 55vw, 600px);
+            height: auto;
+            margin-inline: auto;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.3));
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .subtitle {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            font-weight: 500;
+            color: var(--color-white);
+            margin-bottom: 0.25rem;
+            animation: fadeInUp 1s ease 0.15s forwards;
+            opacity: 0;
+        }
+
+        .location {
+            font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+            color: var(--color-white);
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease 0.3s forwards;
+            opacity: 0;
+        }
+
+        /* Countdown */
+        .countdown-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease 0.45s forwards;
+            opacity: 0;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease 0.6s forwards;
+            opacity: 0;
+        }
+
+        .countdown__block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 70px;
+        }
+
+        .countdown__number {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 7vw, 4rem);
+            line-height: 1;
+            color: var(--color-white);
+        }
+
+        .countdown__unit {
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 0.35rem;
+        }
+
+        .countdown__separator {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: rgba(255, 255, 255, 0.2);
+            align-self: flex-start;
+            padding-top: 0.3rem;
+        }
+
+        /* CTA */
+        .cta-text {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease 0.75s forwards;
+            opacity: 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+            background: var(--color-gold);
+            color: var(--color-white);
+            box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
+            animation: fadeInUp 1s ease 0.9s forwards;
+            opacity: 0;
+        }
+
+        .btn:hover {
+            background: var(--color-gold-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(212, 168, 67, 0.4);
+        }
+
+        /* Divider bottom */
+        .bavarian-divider--bottom {
+            margin-top: 3rem;
+            margin-bottom: 0;
+        }
+
+        .footer-text {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+            animation: fadeInUp 1s ease 1.05s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .countdown {
+                gap: 1.5rem;
+            }
+
+            .countdown__block {
+                min-width: 90px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <img src="assets/images/logo hero.webp" alt="Haarlems Oktoberfest" class="logo" width="400" height="440">
+        <h1 class="sr-only">Haarlems Oktoberfest</h1>
+        <p class="subtitle"><time datetime="2026-09-19">19 September 2026</time></p>
+        <p class="location">Veerplas, Haarlem</p>
+
+        <p class="countdown-label">De website gaat live over</p>
+
+        <div class="countdown" id="countdown">
+            <div class="countdown__block">
+                <span class="countdown__number" id="days">00</span>
+                <span class="countdown__unit">Dagen</span>
+            </div>
+            <span class="countdown__separator">:</span>
+            <div class="countdown__block">
+                <span class="countdown__number" id="hours">00</span>
+                <span class="countdown__unit">Uren</span>
+            </div>
+            <span class="countdown__separator">:</span>
+            <div class="countdown__block">
+                <span class="countdown__number" id="minutes">00</span>
+                <span class="countdown__unit">Minuten</span>
+            </div>
+            <span class="countdown__separator">:</span>
+            <div class="countdown__block">
+                <span class="countdown__number" id="seconds">00</span>
+                <span class="countdown__unit">Seconden</span>
+            </div>
+        </div>
+
+        <div class="bavarian-divider bavarian-divider--bottom" aria-hidden="true"></div>
+        <p class="footer-text">&copy; 2026 Haarlems Oktoberfest</p>
+    </div>
+
+    <script>
+        (function () {
+            var target = new Date('2026-03-19T00:00:00').getTime();
+
+            function update() {
+                var now = Date.now();
+                var diff = target - now;
+
+                if (diff <= 0) {
+                    document.getElementById('days').textContent = '00';
+                    document.getElementById('hours').textContent = '00';
+                    document.getElementById('minutes').textContent = '00';
+                    document.getElementById('seconds').textContent = '00';
+                    return;
+                }
+
+                var d = Math.floor(diff / 86400000);
+                var h = Math.floor((diff % 86400000) / 3600000);
+                var m = Math.floor((diff % 3600000) / 60000);
+                var s = Math.floor((diff % 60000) / 1000);
+
+                document.getElementById('days').textContent = d < 10 ? '0' + d : d;
+                document.getElementById('hours').textContent = h < 10 ? '0' + h : h;
+                document.getElementById('minutes').textContent = m < 10 ? '0' + m : m;
+                document.getElementById('seconds').textContent = s < 10 ? '0' + s : s;
+            }
+
+            update();
+            setInterval(update, 1000);
+        })();
+    </script>
+</body>
+</html>

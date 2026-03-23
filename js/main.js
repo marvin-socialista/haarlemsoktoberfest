@@ -39,6 +39,62 @@
 
     headerObserver.observe(hero);
 
+    // --- Pre-register Form ---
+    var preregisterForm = document.getElementById('preregister-form');
+    if (preregisterForm) {
+        preregisterForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var emailInput = document.getElementById('preregister-email');
+            var message = document.getElementById('preregister-message');
+            var btnText = preregisterForm.querySelector('.preregister-form__btn-text');
+            var btnLoading = preregisterForm.querySelector('.preregister-form__btn-loading');
+            var btn = preregisterForm.querySelector('button[type="submit"]');
+
+            var phoneInput = document.getElementById('preregister-phone');
+
+            btn.disabled = true;
+            btnText.hidden = true;
+            btnLoading.hidden = false;
+            message.hidden = true;
+
+            var payload = { email: emailInput.value.trim() };
+            if (phoneInput && phoneInput.value.trim()) {
+                payload.phone = '+31' + phoneInput.value.trim().replace(/^0+/, '');
+            }
+
+            fetch('/.netlify/functions/preregister', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+            .then(function (res) { return res.json(); })
+            .then(function (data) {
+                message.hidden = false;
+                if (data.success) {
+                    message.textContent = data.duplicate
+                        ? 'Je staat al op de lijst! We houden je op de hoogte.'
+                        : 'Je bent aangemeld! We laten je weten zodra de tickets beschikbaar zijn.';
+                    message.className = 'preregister-form__message preregister-form__message--success';
+                    emailInput.value = '';
+                    if (phoneInput) phoneInput.value = '';
+                } else {
+                    message.textContent = data.error || 'Er ging iets mis. Probeer het later opnieuw.';
+                    message.className = 'preregister-form__message preregister-form__message--error';
+                }
+            })
+            .catch(function () {
+                message.hidden = false;
+                message.textContent = 'Er ging iets mis. Probeer het later opnieuw.';
+                message.className = 'preregister-form__message preregister-form__message--error';
+            })
+            .finally(function () {
+                btn.disabled = false;
+                btnText.hidden = false;
+                btnLoading.hidden = true;
+            });
+        });
+    }
+
     // --- Scroll Reveal Animation ---
     var revealElements = document.querySelectorAll('.reveal');
 
