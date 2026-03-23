@@ -335,6 +335,29 @@ h1, h2, h3 {
     color: var(--color-primary);
 }
 
+.nav__socials {
+    display: none;
+}
+
+.nav__links-socials {
+    display: flex;
+    gap: var(--space-md);
+    padding-top: var(--space-md);
+    margin-top: var(--space-sm);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav__links-socials a {
+    color: var(--color-dark);
+    opacity: 0.6;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.nav__links-socials a:hover {
+    opacity: 1;
+    color: var(--color-primary);
+}
+
 /* --- Buttons --- */
 .btn {
     display: inline-flex;
@@ -776,6 +799,23 @@ h1, h2, h3 {
     position: relative;
 }
 
+.site-footer__socials {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.site-footer__socials a {
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.site-footer__socials a:hover {
+    color: var(--color-gold);
+    transform: scale(1.15);
+}
+
 .site-footer__copy {
     text-align: center;
     font-size: 0.9rem;
@@ -810,6 +850,10 @@ h1, h2, h3 {
         display: none;
     }
 
+    .nav__links-socials {
+        display: none;
+    }
+
     .nav__links {
         position: static;
         width: auto;
@@ -835,5 +879,27 @@ h1, h2, h3 {
 
     .site-header.is-scrolled .nav__links .btn--nav {
         color: var(--color-white);
+    }
+
+    .nav__socials {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        margin-left: var(--space-md);
+    }
+
+    .nav__socials a {
+        color: var(--color-white);
+        opacity: 0.8;
+        transition: opacity 0.2s ease, color 0.2s ease;
+    }
+
+    .nav__socials a:hover {
+        opacity: 1;
+        color: var(--color-gold);
+    }
+
+    .site-header.is-scrolled .nav__socials a {
+        color: var(--color-dark);
     }
 }
