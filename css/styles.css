@@ -624,6 +624,15 @@ h1, h2, h3 {
     margin-bottom: var(--space-md);
 }
 
+.preregister-form__row {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.preregister-form__row .preregister-form__input {
+    flex: 1;
+}
+
 .preregister-form__input {
     width: 100%;
     padding: 1rem 1.25rem;

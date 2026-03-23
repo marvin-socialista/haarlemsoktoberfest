@@ -11,6 +11,13 @@ exports.handler = async function (event) {
     }
 
     var email = body.email;
+    var firstName = (body.firstName || '').trim();
+    var lastName = (body.lastName || '').trim();
+
+    if (!firstName || !lastName) {
+        return { statusCode: 400, body: JSON.stringify({ error: 'Vul je voor- en achternaam in' }) };
+    }
+
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         return { statusCode: 400, body: JSON.stringify({ error: 'Ongeldig e-mailadres' }) };
     }
@@ -38,8 +45,12 @@ exports.handler = async function (event) {
         updateEnabled: true
     };
 
+    contactData.attributes = {
+        FIRSTNAME: firstName,
+        LASTNAME: lastName
+    };
     if (phone) {
-        contactData.attributes = { SMS: phone };
+        contactData.attributes.SMS = phone;
     }
 
     try {

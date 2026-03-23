@@ -44,6 +44,8 @@
     if (preregisterForm) {
         preregisterForm.addEventListener('submit', function (e) {
             e.preventDefault();
+            var firstNameInput = document.getElementById('preregister-firstname');
+            var lastNameInput = document.getElementById('preregister-lastname');
             var emailInput = document.getElementById('preregister-email');
             var message = document.getElementById('preregister-message');
             var btnText = preregisterForm.querySelector('.preregister-form__btn-text');
@@ -57,7 +59,11 @@
             btnLoading.hidden = false;
             message.hidden = true;
 
-            var payload = { email: emailInput.value.trim() };
+            var payload = {
+                email: emailInput.value.trim(),
+                firstName: firstNameInput.value.trim(),
+                lastName: lastNameInput.value.trim()
+            };
             if (phoneInput && phoneInput.value.trim()) {
                 payload.phone = '+31' + phoneInput.value.trim().replace(/^0+/, '');
             }
@@ -75,6 +81,8 @@
                         ? 'Je staat al op de lijst! We houden je op de hoogte.'
                         : 'Je bent aangemeld! We laten je weten zodra de tickets beschikbaar zijn.';
                     message.className = 'preregister-form__message preregister-form__message--success';
+                    firstNameInput.value = '';
+                    lastNameInput.value = '';
                     emailInput.value = '';
                     if (phoneInput) phoneInput.value = '';
                 } else {
