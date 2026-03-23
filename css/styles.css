@@ -712,12 +712,10 @@ h1, h2, h3 {
 }
 
 @media (min-width: 768px) {
-    .preregister-form__fields {
-        flex-direction: row;
-    }
-
-    .preregister-form__input {
-        flex: 1;
+    .preregister-form {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .preregister-form__btn {
